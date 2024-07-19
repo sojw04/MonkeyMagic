@@ -8,7 +8,7 @@ public class ObjDrag : MonoBehaviour
     private Camera cam;
     private Vector3 dragOffset; // 클릭했을때, object의 중앙좌표와과 클릭한 좌표사이의 차이
     Rigidbody2D rb;
-    BoxCollider2D col;
+    CapsuleCollider2D col;
     Compare compare;
 
     void Start()
@@ -16,7 +16,7 @@ public class ObjDrag : MonoBehaviour
         //카메라를 이렇게 따로 지정해주는 이유 = 찾아놓고 계속 쓰기 위해(코드가 가벼워짐)
         cam = Camera.main;
         rb = GetComponent<Rigidbody2D>();
-        col = GetComponent<BoxCollider2D>();
+        col = GetComponent<CapsuleCollider2D>();
         compare = GameObject.Find("ScaleController").GetComponent<Compare>();
         
     }
